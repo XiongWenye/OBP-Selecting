@@ -4,9 +4,9 @@ csv_file_path = 'Compound_OBP_binding.csv'
 data = pd.read_csv(csv_file_path)
 
 target_molecules = {
-    'C4H8O2 丁酸': 'butanoic acid, ethyl ester',
+    'C4H8O2 丁酸': 'butanoic acid',
     'C13H22O 二环己基酮': 'Dicyclohexyl ketone',
-    'C11H22O 十一醛': 'undecanal',
+    'C11H22O 十一醛': 'Undecanal / Hendecanal / Undecylic aldehyde',
     'C2H4O2 乙酸': 'acetic acid',
     'C7H14O 2-庚酮': '2-heptanone',
     'C6H12O 己醛': 'hexanal',

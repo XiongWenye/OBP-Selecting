@@ -26,7 +26,7 @@ def process_binding_value(value):
 def find_best_obp(data, target_molecules):
     best_obps = {}
     for chinese_name, english_name in target_molecules.items():
-        compound_data = data[data['Compound name'].str.contains(english_name, case=False, na=False)]
+        compound_data = data[data['Compound name'].str.lower() == english_name.lower()]
         if not compound_data.empty:
             best_obp = None
             best_obp_score = float('-inf')

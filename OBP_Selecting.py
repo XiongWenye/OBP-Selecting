@@ -37,7 +37,7 @@ def find_best_obp(data, target_molecules):
                         processed_value = process_binding_value(binding_value)
                         if processed_value is not None:
                             other_binding_sum = data[obp].apply(process_binding_value).sum() - processed_value
-                            score = processed_value - other_binding_sum
+                            score = processed_value / (processed_value + other_binding_sum)
                             if score > best_obp_score:
                                 best_obp = obp
                                 best_obp_score = score
